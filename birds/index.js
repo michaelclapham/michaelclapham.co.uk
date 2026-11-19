@@ -1,7 +1,12 @@
 var audio = document.getElementsByTagName("audio")[0];
+var image = document.getElementsByTagName("img")[0];
 
-audio.autoplay = true;
+image.onclick = function () {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
+}
 
 setInterval(function() {
     audio.play();
-}, 20000);
+}, 30000);
